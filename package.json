@@ -1,0 +1,25 @@
+{
+  "name": "oidc",
+  "version": "1.0.0",
+  "description": "OIDC project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Baptiste KENENS",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "ejs": "^3.1.10",
+    "nanoid": "^5.1.5",
+    "oidc-provider": "^9.1.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/oidc-provider": "^9.1.0",
+    "express": "^5.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
