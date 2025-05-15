@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     console.log(state)
     let query = new URLSearchParams({
         client_id: CLIENT_ID,
-        redirect_uri: "http://localhost:3000/oidc_redirect",
+        redirect_uri: "http://localhost:8080/oidc_redirect",
         response_mode: "form_post",
         response_type: "code",
         scope: "openid",

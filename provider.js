@@ -10,7 +10,7 @@ const configuration = {
       client_id,
       client_secret,
       grant_types: ["authorization_code", "refresh_token"],
-      redirect_uris: ["http://localhost:3000/oidc_redirect"],
+      redirect_uris: ["http://localhost:8080/oidc_redirect"],
       response_types: ["code"],
     },
   ],
