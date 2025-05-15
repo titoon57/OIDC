@@ -1,5 +1,6 @@
 import express from "express";
 import * as oidcProvider from 'oidc-provider';
+import config from './config.js'
 
 const app = express();
 const client_id = "oidcCLIENT";
