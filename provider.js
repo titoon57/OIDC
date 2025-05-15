@@ -3,8 +3,8 @@ import * as oidcProvider from 'oidc-provider';
 import config from './config.js'
 
 const app = express();
-const client_id = "oidcCLIENT";
-const client_secret = "Some_secret";
+const client_id = config.client_id;
+const client_secret = config.client_secret;
 const configuration = {
   clients: [
     {
