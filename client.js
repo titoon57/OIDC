@@ -17,7 +17,12 @@ app.get("/", (req, res) => {
     res.cookie("state", state, {signed: true})
     console.log(state)
     let query = new URLSearchParams({
-        client_id: CLIENT_ID
+        client_id: CLIENT_ID,
+        redirect_uri: "http://localhost:3000/oidc_redirect",
+        response_mode: "form_post",
+        response_type: "code",
+        scope: "openid",
+        state
     })
     res.render("login.ejs", {link_url:`${AUTH_ENDPOINT}?${query.toString()}`})
     // res.send("<a href=\"\">Login with OIDC Provider")
