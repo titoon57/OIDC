@@ -4,6 +4,8 @@ import cookieParser from 'cookie-parser'
 const COOKIE_SECRET = "SUPER_SECRET_SECRET"
 const AUTH_SERVER = "http://localhost:3000"
 const AUTH_ENDPOINT = `${AUTH_SERVER}/oidc/auth`
+const CLIENT_ID = "oidcCLIENT"
+const CLIENT_SECRET = "Some_super_secret"
 
 const app = express()
 app.use(cookieParser(COOKIE_SECRET))
@@ -14,7 +16,10 @@ app.get("/", (req, res) => {
     const state = nanoid(15)
     res.cookie("state", state, {signed: true})
     console.log(state)
-    res.render("login.ejs", {link_url:`${AUTH_ENDPOINT}`})
+    let query = new URLSearchParams({
+        client_id: CLIENT_ID
+    })
+    res.render("login.ejs", {link_url:`${AUTH_ENDPOINT}?${query.toString()}`})
     // res.send("<a href=\"\">Login with OIDC Provider")
 })
 
